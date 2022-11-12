@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgrey;
+    height: 100vh;
+    margin: 0;
+}
+.left{
+    width: 35%;
+    min-width: 400px;
+    height: 100%;
+    margin: 0;
+    background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+.logo{
+    color: white;
+    text-align: center;
+    background-color: rgba(40, 40, 44, 0.5);
+    width: auto;
+    height: 50px;
+    margin-top: 30%;
+    
+}
+.credit{
+    color: black;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin-top: 55%;
+}
+
