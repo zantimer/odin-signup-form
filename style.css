@@ -10,58 +10,85 @@ body{
 }
 .left{
     width: 35%;
-    min-width: 400px;
+    min-width: 350px;
     height: 100%;
     margin: 0;
+
     background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: inline-block;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@font-face {
+    font-family: 'norse';
+    src: url(./images/Norse-Bold.otf);
 }
 .logo{
+    font-family: 'norse', sans-serif;
+    font-size: 90px;
     color: white;
     text-align: center;
+
     background-color: rgba(40, 40, 44, 0.5);
+    background-image: url(./images/odin-lined.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 50px;
+    
+
     width: auto;
-    height: 50px;
-    margin-top: 30%;
+    height: 90px;
+    margin-top: 100px;
     
 }
 .credit{
-    color: black;
+    color: white;
     text-align: center;
-    background-color: rgb(255, 255, 255, 0.5);
-    margin-top: 55%;
+    background-color: rgba(40, 40, 44, 0.5);
+    margin-bottom: 20px;
 }
 .right{
     display:flex;
     flex-direction: column;
     
-    width:65%;
+    width:55%;
     height:100%;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .header{
     text-align:start;
     width:100%;
     height: 25%;
     
-    padding:0 80px;
+    padding:0 100px 0 50px;
     margin-top: 5%;
+    margin-bottom: 10px;
 
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 .form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: stretch;
+    
+    border: 2px inset rgba(255,255,255,0.5);
+    background-color: rgb(199, 194, 194);
+
     width: 90%;
-    height: 55%;
-    margin-left: 10px;
+    min-width: 435px;
+    height: 50%;
+
+    margin-left: 30px;
     margin-top: 10px;
+    
 }
 .form h3{
-    padding-left: 30px;
+    padding-left: 20px;
     margin: 0;
     margin-bottom: -10px;
 }
@@ -72,13 +99,68 @@ body{
     gap: 3vw;
     padding: 10px;
     height: 60px;
-    width:100%;
+    width:50%;
 }
 .input-block{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 5%;
+    width: 100%;
+}
+label{
+    display: flex;
+    justify-content: space-between;
+    
+    color:rgba(0,0,0,0.5);
+    font-size: 10px;
+}
+.required::after{
+    content:' Required';
+    padding: 2px;
+    background-color: black;
+    color: white;
+    font-size: 10px;
 }
 input{
     border:0;
+    border-radius: 5px;
+}
+input:focus{
+    outline: 2px solid rgb(81, 81, 211);
+    border-radius: 5px;
+    
+}
+input:invalid{
+    outline: 1px solid red;
+}
+.error{
+    outline: 1px solid red;
+    border-radius: 5px;
+    color:red;
+}
+.validation,
+.confvalidation{
+    font-size: 10px;
+}
+button{
+    width: 150px;
+    height: 35px;
+    margin-left: 30px;
+
+    background-color: rgb(89, 109, 72);
+    color: white;
+
+    border:none;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgba(89, 109, 72, 0.8);
+    cursor: pointer;
+}
+.login{
+    margin-left: 30px;
+}
+.login a{
+    text-decoration: none;
+    color: rgb(89, 109, 72);
 }

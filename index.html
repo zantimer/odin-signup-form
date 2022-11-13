@@ -11,56 +11,72 @@
     <div class="left">
         
         <div class="logo">
-            nn
+            odin
         </div>
         <div class="credit">
-            pic by someone
+            Photo by Halle West @ Unsplash.com
         </div>
     </div>
     <div class="right">
         <div class="header">
             <p>This is not a real online service! You know you want something like this in your life to help you realise your deepest dreams. Sign up now to get started!</p>
+            <p>You know you want to</p>
         </div>
         <div class="form">
             <form action="" method="get">
                 <h3>Let's do this!</h3>
                 <div class="name">
                     <div class="input-block">
-                        <label for="fname">First name</label>
+                        <label for="fname" class="required">FIRST NAME</label>
                         <input type="text" id="fname" name="fname">
                     </div>
                     
                     <div class="input-block">
-                        <label for="lname">Last name</label>
+                        <label for="lname" class="required">LAST NAME</label>
                         <input type="text" id="lname" name="lname">
                     </div>
                 </div>
                 
                 <div class="contact">
                     <div class="input-block">
-                        <label for="email">E-mail</label>
+                        <label for="email" class="required">E-MAIL</label>
                         <input type="email" id="email" name="email">
                     </div>
                     
                     <div class="input-block">
-                        <label for="telnum">Phone number</label>
+                        <label for="telnum">PHONE NUMBER</label>
                         <input type="tel" id="telnum" name="telnum">
                     </div>
                 </div>
                 
                 <div class="pwd">
                     <div class="input-block">
-                        <label for="pwd">Password</label>
-                        <input type="password" id="pwd" name="pwd">
+                        <label for="pwd" class="required">PASSWORD</label>
+                        <input type="password" 
+                        id="pwd" 
+                        name="pwd" 
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                        >
+                        <p class="validation"></p>
                     </div>
                     
                     <div class="input-block">
-                        <label for="confirm-pwd">Confirm password</label>
-                        <input type="text" id="confirm-pwd" name="confirm-pwd">
+                        <label for="confirm-pwd" class="required">CONFIRM PASSWORD</label>
+                        <input type="password" 
+                        id="confirm-pwd" 
+                        name="confirm-pwd"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                        >
+                        <p class="confvalidation"></p>
                     </div>
                 </div>
-            </form>
-        </div>
+                
+            </div>
+            <label for="submit"></label>
+            <button type="submit">Create Account</button>
+            <p class="login">Already have an account?<a href="">Log in!</a></p>
+        </form>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
