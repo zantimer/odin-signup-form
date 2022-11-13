@@ -140,7 +140,7 @@ input:invalid{
 }
 .validation,
 .confvalidation{
-    font-size: 10px;
+    font-size: 12px;
 }
 button{
     width: 150px;
