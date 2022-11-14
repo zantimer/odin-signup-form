@@ -3,49 +3,32 @@ const confirmPwd = document.querySelector('input#confirm-pwd');
 const pwdValidation = document.querySelector('.validation');
 const confPwdValidation = document.querySelector('.confvalidation');
 
-console.log(pwd);
-console.log(confirmPwd);
+
 pwd.addEventListener('keyup', () =>{
-    if (pwd.value == confirmPwd.value)
-    {
-        pwdValidation.textContent = "Passwords matching";
-        confPwdValidation.textContent = "Passwords matching";
-        pwdValidation.classList.remove('error');
-        confPwdValidation.classList.remove('error');
-    }
-    else
-    {
-        pwdValidation.textContent = "Passwords do not match";
-        pwdValidation.classList.add('error');
-        confPwdValidation.textContent = "Passwords do not match"
-        confPwdValidation.classList.add('error');
-    }
-    if (!pwd.validity.valid)
-    {
-        pwdValidation.textContent += ", invalid password format, needs at least one of each: uppercase, special character, number";
-        pwdValidation.classList.add('error');
-    }
+    PwdValidation(pwd, confirmPwd, pwdValidation, confPwdValidation);
 });
 confirmPwd.addEventListener('keyup', () =>{
-    if (pwd.value == confirmPwd.value)
-    {
-        pwdValidation.textContent = "Passwords matching";
-        confPwdValidation.textContent = "Passwords matching";
-        pwdValidation.classList.remove('error');
-        confPwdValidation.classList.remove('error');
-    }
-    else
-    {
-        pwdValidation.textContent = "Passwords do not match";
-        pwdValidation.classList.add('error');
-        confPwdValidation.textContent = "Passwords do not match"
-        confPwdValidation.classList.add('error');
-    }
-    if (!confirmPwd.validity.valid)
-    {
-        confPwdValidation.textContent += ", invalid password format, needs at least one of each: uppercase, special character, number";
-        confPwdValidation.classList.add('error');
-    }
+    PwdValidation(confirmPwd, pwd, confPwdValidation, pwdValidation);
 });
 
+
+function PwdValidation(field, compareField, msg1, msg2) {
+    if (field.value == compareField.value) {
+        msg1.textContent = "Passwords matching";
+        msg1.classList.remove('error');
+        msg2.textContent = "Passwords matching";
+        msg2.classList.remove('error');
+    }
+
+    else {
+        msg1.textContent = "Passwords do not match";
+        msg1.classList.add('error');
+        msg2.textContent = "Passwords do not match";
+        msg2.classList.add('error');
+    }
+    if (!field.validity.valid) {
+        msg1.textContent += ", invalid password format, needs at least one of each: uppercase, special character, number";
+        msg1.classList.add('error');
+    }
+}
 
